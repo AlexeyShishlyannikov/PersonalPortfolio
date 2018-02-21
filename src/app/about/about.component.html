@@ -1,0 +1,20 @@
+<mat-card (appear)="appeared()" [@slideUp]="hasAppeared ? 'appeared' : 'hidden'" class="margin-top">
+  <h1 class="text-center">Who?</h1>
+  <mat-divider [inset]="true"></mat-divider>
+  <div class="row">
+    <div class="container">
+      <mat-card-content>
+        <h2>
+          Hello! I'm Alexey Shishlyannikov. Front End developer from Seattle area. I use Angular and Typescript to develop modern,
+          mobile-friendly dynamic web applications.
+        </h2>
+        <div class="text-center">
+          <a href="../../assets/resume_ready.pdf" mat-raised-button color="primary">
+            <mat-icon>file_download</mat-icon>
+            DOWNLOAD RESUME
+          </a>
+        </div>
+      </mat-card-content>
+    </div>
+  </div>
+</mat-card>

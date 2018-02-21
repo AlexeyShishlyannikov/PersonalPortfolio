@@ -1,0 +1,18 @@
+<div class="dialog-container">
+  <mat-card-header>
+    <mat-card-title>
+    <a href="{{ project.link }}" target="_blank">
+      {{ project.name }}
+    </a>
+    </mat-card-title>
+    <mat-card-subtitle>{{ project.date }}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="{{ project.picture }}" alt="">
+  <mat-card-content>
+    <p>{{ project.description }}</p>
+    <h2>Technologies:</h2>
+    <ul>
+      <li *ngFor="let t of project.technologies">{{ t }}</li>
+    </ul>
+  </mat-card-content>
+</div>

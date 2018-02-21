@@ -1,0 +1,40 @@
+<!-- <div class="container">
+  <div class="">
+    <h1 class="text-center white margin-bottom">SKILLS</h1>
+  </div>
+  <div class=" row" (appear)="appeared()" [@animateAll]="hasAppeared ? 'appeared' : 'hidden'">
+    <div class="col-md-4" *ngFor="let skill of skills">
+      <mat-card [@bounceIn]="hasAppeared ? 'appeared' : 'hidden'" class="sidestep">
+        <mat-card-header>
+          <mat-card-title>
+            <h1>
+              {{ skill.name }}
+            </h1>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          {{ skill.description }}
+        </mat-card-content>
+      </mat-card>
+    </div>
+</div> -->
+<div class="container" [@animateAll]="hasAppeared ? 'appeared' : 'hidden'">
+  <div class="padding-top">
+    <h1 class="text-center white margin-bottom">SKILLS</h1>
+  </div>
+  <div class="details white text-center margin-bottom">
+    <mat-icon>format_quote</mat-icon>
+    <span>I'm the Front-End Developer you were looking for. I have serious passion for GOOD software, UI, animations and creating
+    intuitive, dynamic user experiences. Let's make something special together.</span>
+    <mat-icon>format_quote</mat-icon>
+  </div>
+  <div (appear)="appeared()">
+      <div  [@jumpIn]="hasAppeared ? 'appeared' : 'hidden'" *ngFor="let skill of skills;let i = index" style="margin-bottom: 15px;" >
+      <h2 class="white" style="font-weight: 100;">{{ skill.name }}</h2>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" [style.backgroundColor]="this.getColor(skill.level)"
+        style.width="{{skill.level}}%"></div> 
+      </div>
+    </div>
+  </div>
+</div>

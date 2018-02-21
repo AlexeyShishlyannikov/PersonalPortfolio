@@ -1,0 +1,24 @@
+<div class="container">
+  <h1 class="text-center">PROJECTS</h1>
+  <div style="margin-bottom: 30px;" *ngIf="projects.length > 0">
+    <mat-grid-list *ngIf="!this.matchMedia" cols="2" [rowHeight]="'2:1'">
+      <mat-grid-tile *ngFor="let p of projects">
+        <div class="project">
+          <img src="{{ p.picture }}" alt="">
+          <h2 class="name white">{{ p.name }}</h2>
+          <button class="btn-abs" routerLink="" [queryParams]="{ name: p.name }" (click)="openContent()">Learn More</button>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+    <div *ngIf="this.matchMedia">
+      <div *ngFor="let p of projects">
+        <div class="project p-wrapper">
+          <img src="{{ p.picture }}" alt="">
+          <h2 class="name white">{{ p.name }}</h2>
+          <button class="btn-abs" routerLink="" [queryParams]="{ name: p.name }" (click)="openContent()">Learn More</button>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>

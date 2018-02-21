@@ -1,0 +1,33 @@
+.sidestep {
+  margin-bottom: 15px;
+}
+mat-card{
+  height: 200px;
+}
+@media (max-width: 992px){
+  mat-card{
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px){
+  mat-card{
+    height: auto;
+  }
+}
+.margin-bottom{
+  margin-bottom: 30px;
+}
+.padding-top{
+  padding-top: 60px;
+}
+.progress{
+  height: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.details{
+  font-size: 130%;
+  font-weight: 100;
+  line-height: 35px;
+}

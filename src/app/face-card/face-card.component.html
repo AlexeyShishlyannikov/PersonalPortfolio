@@ -1,0 +1,49 @@
+<div class="row">
+  <div class="col-lg-2"></div>
+  <div class="col-lg-8">
+    <mat-card
+     (appear)="appeared()" [@fade]="hasAppeared ? 'appeared' : 'hidden'"
+    class="margin-top mat-elevation-z10">
+      <div class="row">
+        <div class="col-sm-5">
+          <img id="face" src="../../assets/face1.jpg" alt="My face">
+        </div>
+        <div class="col-sm-7">
+          <div class="title">
+            <p [style.margin-top]="'5px'">
+              <mat-chip-list>
+                <mat-chip color="primary" [selected]="true">Hello</mat-chip>
+              </mat-chip-list>
+            </p>
+            <h1>I'm
+              <span>Alexey Shishlyannikov</span>
+            </h1>
+            <h4>
+              <mat-icon>code</mat-icon> Web Developer</h4>
+          </div>
+
+          <mat-divider [inset]="true"></mat-divider>
+          <br>
+          <div class="row">
+            <div class="col-5">
+              <h5>Address</h5>
+              <h5>Email</h5>
+              <h5>Phone</h5>
+              <h5>Age</h5>
+              <h5>Visa Sponsorship</h5>
+            </div>
+            <div class="col-7">
+              <h5>Seattle, WA USA</h5>
+              <h5>
+                <a href="mailto:shishyannikov95@gmail.com">shishyannikov95@gmail.com</a>
+              </h5>
+              <h5 #phone (click)="phone.innerHTML = '(253) 222-9179'" class="phone">Click Me!</h5>
+              <h5>22</h5>
+              <h5>Not required</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</div>

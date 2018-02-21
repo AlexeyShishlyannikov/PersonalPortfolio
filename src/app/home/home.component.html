@@ -1,0 +1,47 @@
+<div class="background background-color0">
+  <app-landing (scrollClick)="scroll($event)"></app-landing>
+  <div class="text-center">
+    <mat-icon class="arrow" style="margin-top: 80px;" (click)="scroll('app-face-card')">
+      keyboard_arrow_down
+    </mat-icon>
+  </div>
+</div>
+<div class="background background-color1">
+  <div class="container">
+    <app-face-card></app-face-card>
+    <app-about></app-about>
+    <div class="margin-top"></div>
+    <div class="text-center">
+      <mat-icon class="arrow" style="margin-top: 80px;" (click)="scroll('app-skills')">
+        keyboard_arrow_down
+      </mat-icon>
+    </div>
+  </div>
+</div>
+<div class="background background-color2">
+  <div class="container">
+    <app-skills></app-skills>
+    <div class="margin-top"></div>
+    <div class="text-center">
+      <mat-icon class="arrow" style="margin-top: 30px;" (click)="scroll('app-github')">
+        keyboard_arrow_down
+      </mat-icon>
+    </div>
+  </div>
+</div>
+<div class="background background-color3">
+  <app-github></app-github>
+  <app-projects></app-projects>
+    <div class="margin-top"></div>
+  <div class="text-center">
+    <mat-icon class="arrow" style="margin-top: 20px; color: black;" (click)="scroll('app-landing')">
+      keyboard_arrow_up
+    </mat-icon>
+  </div>
+</div>
+<div class="face">
+  <img src="../../assets/left-face.png" alt="">
+</div>
+
+
+

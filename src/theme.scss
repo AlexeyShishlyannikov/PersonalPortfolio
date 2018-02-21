@@ -1,0 +1,22 @@
+// all variables
+@import "../node_modules/@angular/material/_theming";
+// main mixin
+@include mat-core();
+
+$app-primary: mat-palette($mat-pink, A700);
+$app-accent: mat-palette($mat-blue, 800);
+$app-warn: mat-palette($mat-red);
+
+$app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
+
+@include angular-material-theme($app-theme);
+
+.mat-toolbar{
+  background-color: rgba($color: #000000, $alpha: 0.0);
+
+}
+.mat-toolbar,
+.mat-primary,
+.mat-toolbar.mat-primary{
+  background-color: rgba($color: #000000, $alpha: 0.0);
+}

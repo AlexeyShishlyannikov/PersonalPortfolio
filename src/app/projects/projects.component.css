@@ -1,0 +1,65 @@
+.margin-bottom{
+  margin-bottom: 20px;
+}
+.project img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.p-wrapper{
+  position: relative;
+}
+.project > img{
+  transition: ease-in 0.6s;
+}
+.project:hover > img{
+  filter: brightness(0.25);
+  transition: ease-out 0.6s;
+}
+.project:hover > .name{
+  position: absolute;
+  left: 30px;
+  opacity: 1;
+  transition: ease-out 0.6s;
+}
+.project:hover > .btn-abs{
+  position: absolute;
+  bottom: 20%;
+  opacity: 1;
+  border: 1px #fff solid;
+  transition: ease-out 0.6s;
+}
+.name{
+  position: absolute;
+  left: 0;
+  top: 15%;
+  opacity: 0;
+  font-weight: 500;
+  user-select: none;
+  transition: ease-in 0.2s;
+}
+.btn-abs{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 130px;
+  height: 40px;
+  margin: 0 auto;
+  transition: ease-in 0.2s;
+  background-color: #00000000;
+  color: #fff;
+  border: none;
+  opacity: 0;
+}
+.btn-abs:hover{
+  background-color: rgba(255, 255, 255, 0.281);
+  transition: ease-out .3s;
+}
+@media (max-width: 768px){
+  h3{
+    overflow: hidden;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+  }
+}
